@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Verifikasi Ijazah Blockchain</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Ethers.js v6 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+
+</head>
+
+<body class="bg-gray-100 min-h-screen p-6">
+
+    <h1 class="text-4xl font-bold text-center text-blue-700 mb-10">
+        Verifikasi Ijazah Berbasis Blockchain
+    </h1>
+
+    <!-- LOGIN -->
+    <div class="flex justify-center mb-6">
+        <button onclick="connectWallet()"
+            class="py-3 px-6 bg-purple-600 text-white text-lg font-semibold rounded-xl hover:bg-purple-700 transition">
+            Login dengan MetaMask
+        </button>
+    </div>
+
+    <p id="walletAddress" class="text-center text-gray-700 mb-10 text-lg"></p>
+
+
+    <!-- GRID -->
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- UPLOAD -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-2xl font-semibold mb-6">Upload & Simpan Ijazah</h2>
+
+            <input id="nim" type="text" placeholder="NIM mahasiswa"
+                class="input w-full p-3 mb-3 rounded-lg border border-gray-300">
+
+            <input id="nama" type="text" placeholder="Nama pemilik"
+                class="input w-full p-3 mb-3 rounded-lg border border-gray-300">
+
+            <input id="prodi" type="text" placeholder="Program studi"
+                class="input w-full p-3 mb-3 rounded-lg border border-gray-300">
+
+            <input id="tahun" type="text" placeholder="Tahun lulus"
+                class="input w-full p-3 mb-3 rounded-lg border border-gray-300">
+
+            <p class="font-medium mt-3 text-gray-700">Upload File Ijazah</p>
+            <input id="pdfInput" type="file"
+                class="input w-full p-2 mt-2 mb-4 border border-gray-300 rounded-lg bg-gray-50">
+
+            <button id="btnUpload" disabled onclick="uploadIjazah()"
+                class="w-full py-3 bg-blue-400 text-white font-semibold rounded-xl opacity-50 cursor-not-allowed transition">
+                Simpan ke Blockchain
+            </button>
+        </div>
+
+        <!-- VERIFY -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-2xl font-semibold mb-6">Verifikasi Ijazah</h2>
+
+            <input id="nimVerif" type="text" placeholder="Masukkan NIM"
+                class="w-full p-3 mb-3 rounded-lg border border-gray-300">
+
+            <p class="font-medium text-gray-700 mt-3">Upload File Ijazah</p>
+            <input id="pdfVerif" type="file"
+                class="w-full p-2 mt-2 mb-4 border border-gray-300 rounded-lg bg-gray-50">
+
+            <button id="btnVerif" disabled onclick="verifikasi()"
+                class="w-full py-3 bg-green-400 text-white font-semibold rounded-xl opacity-50 cursor-not-allowed transition">
+                Verifikasi
+            </button>
+        </div>
+
+    </div>
+
+    <!-- STATUS -->
+    <p id="status" class="text-center mt-10 text-2xl font-bold"></p>
+
+    <!-- LOADING SPINNER -->
+    <div id="spinner" class="hidden fixed inset-0 flex justify-center items-center bg-black/50 z-50">
+        <div class="animate-spin rounded-full h-20 w-20 border-t-4 border-blue-600"></div>
+    </div>
+
+    <!-- TOAST NOTIF -->
+    <div id="toast"
+        class="hidden fixed bottom-5 right-5 px-5 py-3 rounded-xl shadow-xl text-white text-lg transition-all">
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

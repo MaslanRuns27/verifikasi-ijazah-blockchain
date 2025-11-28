@@ -1,0 +1,10 @@
+await contract.dataIjazah("23010320018");
+const contract = await ethers.getContractAt("VerifikasiIjazah", address);
+const address = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+await contract.dataIjazah("23010320018");
+await contract.verifikasiIjazah("20231234", "Maslan@27")
+await contract.dataIjazah("20231234");
+await contract.tambahIjazah(  "20231234",  "Dhimas Hamzah",  "Teknik Informatika",  "2025",  "Maslan@27");
+await contract, tambahIjazah("23010320018","Dhimas Hamzah","Teknik Informatika","2025","Maslan@27");
+const contract = await ethers.getContractAt("VerifikasiIjazah", address);
+const address = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
