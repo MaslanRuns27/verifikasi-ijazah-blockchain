@@ -188,11 +188,11 @@ Fitur keamanan yang diterapkan:
 
 ## 👨‍💻 Developer
 
-Nama: **Maslan Runs**
-Project: *Sistem Verifikasi Ijazah Berbasis Blockchain*
-Bahasa Pemrograman: Solidity, JS
-Framework: Hardhat, TailwindCSS
-Tahun: 2025
+* Nama: **Maslan Runs**
+* Project: *Sistem Verifikasi Ijazah Berbasis Blockchain*
+* Bahasa Pemrograman: Solidity, JS
+* Framework: Hardhat, TailwindCSS
+* Tahun: 2025
 
 ---
 
